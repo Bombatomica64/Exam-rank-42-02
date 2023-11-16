@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flood_fill.h                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 16:44:53 by lmicheli          #+#    #+#             */
-
-/*   Updated: 2023/11/16 17:12:54 by lmicheli         ###   ########.fr       */
-
-/*   Updated: 2023/11/16 16:45:10 by lmicheli         ###   ########.fr       */
-
+/*   Created: 2023/11/16 09:47:38 by lmicheli          #+#    #+#             */
+/*   Updated: 2023/11/16 09:48:24 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FLOOD_FILL_H
-# define FLOOD_FILL_H
-
-typedef struct	s_point
+int    ft_strcmp(char *s1, char *s2)
 {
-	int	x;
-	int	y;
-}				t_point;
+	int		i;
 
-
-void  	flood_fill(char **tab, t_point size, t_point begin);
-void	fill(char **tab, t_point size, t_point cur, char to_fill);
-
-
-
-
-#endif
+	i = 0;
+	while (s1[i] && s2[i])
+	{
+		if(s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+}
