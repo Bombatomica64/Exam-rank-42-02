@@ -6,12 +6,12 @@
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 18:31:35 by lmicheli          #+#    #+#             */
-/*   Updated: 2023/11/16 18:41:56 by lmicheli         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:42:38 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
+// #include <stdlib.h>
 static int is_sorted(int *tab, unsigned int size)
 {
 	unsigned int i = 0;
