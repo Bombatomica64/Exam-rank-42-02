@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flood_fill.h                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 16:44:53 by lmicheli          #+#    #+#             */
-
-/*   Updated: 2023/11/16 17:12:54 by lmicheli         ###   ########.fr       */
-
-/*   Updated: 2023/11/16 16:45:10 by lmicheli         ###   ########.fr       */
-
+/*   Created: 2023/11/15 18:32:10 by lmicheli          #+#    #+#             */
+/*   Updated: 2023/11/15 18:41:07 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FLOOD_FILL_H
-# define FLOOD_FILL_H
-
-typedef struct	s_point
+int	ft_atoi(const char *str)
 {
-	int	x;
-	int	y;
-}				t_point;
+	int		i;
+	int		result;
+	int		sign;
 
-
-void  	flood_fill(char **tab, t_point size, t_point begin);
-void	fill(char **tab, t_point size, t_point cur, char to_fill);
-
-
-
-
-#endif
+	i = 0;
+	result = 0;
+	sign = 1;
+	if(str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	while(str[i])
+	{
+		result = result * 10 + str[i] - '0';
+		i++;
+	}
+	return (result * sign);
+}

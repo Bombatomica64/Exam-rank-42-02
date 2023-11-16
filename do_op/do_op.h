@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   flood_fill.h                                       :+:      :+:    :+:   */
+/*   do_op.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 16:44:53 by lmicheli          #+#    #+#             */
-
-/*   Updated: 2023/11/16 17:12:54 by lmicheli         ###   ########.fr       */
-
-/*   Updated: 2023/11/16 16:45:10 by lmicheli         ###   ########.fr       */
-
+/*   Created: 2023/11/15 18:15:54 by lmicheli          #+#    #+#             */
+/*   Updated: 2023/11/15 18:27:56 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FLOOD_FILL_H
-# define FLOOD_FILL_H
+#ifndef DO_OP_H
+# define DO_OP_H
 
-typedef struct	s_point
-{
-	int	x;
-	int	y;
-}				t_point;
-
-
-void  	flood_fill(char **tab, t_point size, t_point begin);
-void	fill(char **tab, t_point size, t_point cur, char to_fill);
-
-
-
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdio.h>
 
 #endif
