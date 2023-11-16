@@ -12,6 +12,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+//test
 
 static int	ft_strlen(char *str)
 {
