@@ -6,7 +6,7 @@
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 14:24:52 by lmicheli          #+#    #+#             */
-/*   Updated: 2023/11/23 14:47:19 by lmicheli         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:05:07 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int ft_strlen(char *str)
 		i++;
 	return (i);
 }
+//bho
 
 int is_in_str(char c, char *str)
 {
