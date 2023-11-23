@@ -6,7 +6,10 @@
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 14:24:52 by lmicheli          #+#    #+#             */
+
 /*   Updated: 2023/11/23 16:11:30 by lmicheli         ###   ########.fr       */
+/*   Updated: 2023/11/23 16:05:07 by lmicheli         ###   ########.fr       */
+
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +24,8 @@ int ft_strlen(char *str)
 	return (i);
 }
 //bho
-//return ((condizione) se si ? se no);
+//return ((condizione) se si ? se no)
+
 int is_in_str(char c, char *str)
 {
 	int i = 0;
