@@ -6,12 +6,12 @@
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 11:47:07 by lmicheli          #+#    #+#             */
-/*   Updated: 2023/11/23 12:25:13 by lmicheli         ###   ########.fr       */
+/*   Updated: 2023/11/23 12:43:45 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
+#include <printf.h>
 /* void print_bits(unsigned char octet)
 {
 	int	i = 8;
