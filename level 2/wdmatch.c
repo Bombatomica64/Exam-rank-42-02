@@ -1,63 +1,67 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camel_to_snake.c                                   :+:      :+:    :+:   */
+/*   wdmatch.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 17:13:37 by lmicheli          #+#    #+#             */
-/*   Updated: 2023/11/15 18:07:49 by lmicheli         ###   ########.fr       */
+/*   Created: 2023/11/23 14:24:52 by lmicheli          #+#    #+#             */
+/*   Updated: 2023/11/23 16:05:07 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h>
 
-static int	ft_strlen(char *str)
+int ft_strlen(char *str)
 {
-	int	i;
+	int i = 0;
 
-	i = 0;
 	while(str[i])
 		i++;
 	return (i);
 }
+//bho
+
+int is_in_str(char c, char *str)
+{
+	int i = 0;
+	
+	while(str[i])
+	{
+		if (c == str[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
 
 int	main(int args, char **argv)
 {
-	int		i;
-	int		j;
-	int		len;
-	char	*str;
-
-	i = 0;
-	len = ft_strlen(argv[1]);
-	if (args != 2)
+	if (args !=  3)
 	{
 		write(1, "\n", 1);
 		return (0);
 	}
-	while (argv[1][i])
-	{
-		if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-			len++;
-		i++;
-	}
-	i = 0;
-	j = 0;
-	str = (char *)malloc(sizeof(char) * (len + 1));
+	// int len1 = ft_strlen(argv[1]);
+	// int len2 = ft_strlen(argv[2]);
+	int i = 0;
+	int j = 0;
 	while(argv[1][i])
 	{
-		if(argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+		if(is_in_str(argv[1][i],&argv[2][j]) == 1)
 		{
-			str[i + j] = '_';
+			while(argv[1][i] != argv[2][j])
+				j++;	
 			j++;
-			str[i + j] = argv[1][i] + 32;
+			i++;
 		}
 		else
-			str[i + j] = argv[1][i];
-		i++;
+		{
+			write(1,"\n",1);
+			return (0);
+		}	
 	}
-	str[i + j] = '\0';
-	write(1, str, len);
+	write(1, argv[1], ft_strlen(argv[1]));
+	return (0);
 }
