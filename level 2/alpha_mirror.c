@@ -6,7 +6,7 @@
 /*   By: lmicheli <lmicheli@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 15:12:58 by lmicheli          #+#    #+#             */
-/*   Updated: 2023/11/15 17:07:06 by lmicheli         ###   ########.fr       */
+/*   Updated: 2023/11/24 11:06:00 by lmicheli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,11 @@
 
 static int	ft_switchlower(int c)
 {
-	if(c <= 110)
-		return (c + 13);
-	else
-		return (c - 13);
+	return (219 - c);
 }
 static int	ft_switchUPPER(int c)
 {
-	if(c <= 78)
-		return (c + 13);
-	else
-		return (c - 13);
+	return(155 - c);
 }
 
 int main (int args, char **argc)
@@ -32,7 +26,7 @@ int main (int args, char **argc)
 	int i;
 
 	i = 0;
-	if (argc != 2)
+	if (args != 2)
 		return (0);
 	while (argc[1][i])
 	{
